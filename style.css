@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Agrandir";
+    src: url("fontes/Agrandir-GrandHeavy.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Agrandir-light", sans-serif;
+    src: url("fontes/Agrandir-GrandLight.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Nourd", sans-serif;
+    src: url("fontes/nourd_regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+:root {
+    --cor1: #082f3d;
+    --cor2: #B8DBE7;
+    --cor3: #77AABD;
+    --cor4: #447D92;
+    --cor5: #1F5468;
+    --cor6: #E7D1B8;
+
+    --fonte-padrao: "Agrandir", sans-serif;
+    --fonte-light: "Agrandir-light", sans-serif;
+    --fonte-nourd: "Nour", sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-nourd);
+    margin: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+#home {
+    background: linear-gradient(90deg, var(--cor1) 70%, var(--cor2) 30%) no-repeat;
+    font-family: var(--fonte-nourd);
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 737px;
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: var(--fonte-padrao);
+    font-size: 0.9em;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    padding-left: 15px;
+    transition: filter 0.3s ease;
+}
+
+.logo.light {
+    filter: invert(0%);
+}
+
+.logo.dark {
+    filter: invert(100%);
+}
+
+.principal {
+    display: block;
+    margin-top: 200px;
+    padding-left: 120px;
+}
+
+.perfil {
+    padding-right: 4px;
+    margin-top: 200px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.604);
+}
+
+.links {
+    margin-top: 150px;
+    margin-right: 20px;
+}
+
+.github {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    border-radius: 25px;
+}
+
+.github:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.573);
+}
+
+.linkedin {
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+.linkedin:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.573);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    width: 500px;
+    padding-left: 5px;
+    padding-top: 20px;
+    font-size: 3em;
+    color: white;
+    word-wrap: normal;
+    letter-spacing: -0.03em;
+    text-shadow: 3px 2px rgba(0, 0, 0, 0.268);
+}
+
+h1 {
+    width: 450px;
+    padding-top: 20px;
+    font-size: 4em;
+    color: var(--cor2);
+    word-wrap: normal;
+    letter-spacing: -0.03em;
+    text-shadow: 3px 2px rgba(0, 0, 0, 0.268);
+}
+
+#p1 {
+    width: 550px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.8em;
+    padding-left: 5px;
+    padding-top: 10px;
+    text-shadow: 3px 2px rgba(0, 0, 0, 0.268);
+}
+
+#sobre {
+    background: var(--cor3);
+    font-family: var(--fonte-nourd);
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 650px;
+    display: flex;
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+.experiencia {
+    width: 800px;
+    margin-left: 100px;
+}
+
+.habilidades {
+    width: 800px;
+    margin-bottom: 100px;
+}
+
+.sub {
+    color: black;
+    font-size: 4em;
+    text-shadow: none;
+}
+
+#p2 {
+    width: 500px;
+    font-size: 1.1em;
+    color: black;
+    line-height: 1.6em;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+#p3 {
+    width: 540px;
+    font-size: 1.1em;
+    color: black;
+    line-height: 1.6em;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.slide {
+    height: 100vh;
+    position: relative;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.progress {
+    width: 100%;
+    height: 0;
+    background: #333;
+    transition: height 0.3s;
+}
+
+.indicator-container {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 8px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.indicator {
+    width: 100%;
+    height: 0;
+    background: #333;
+    transition: height 0.3s;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background: #667;
+}
