@@ -158,7 +158,7 @@ h1 {
 }
 
 #sobre {
-    background: var(--cor3);
+    background: var(--cor2);
     font-family: var(--fonte-nourd);
     margin: auto;
     padding-left: 100px;
@@ -169,8 +169,15 @@ h1 {
     padding-bottom: 80px;
 }
 
+hr {
+    background-color: black;
+    height: 500px;
+    padding-right: 5px;
+    margin-right: 60px;
+}
+
 .experiencia {
-    width: 800px;
+    width: 700px;
     margin-left: 100px;
 }
 
