@@ -84,6 +84,9 @@ function updateLogoColor() {
     if (currentSection === 'sobre') {
         logo.classList.add('dark');
         logo.classList.remove('light');
+    } else if (currentSection === 'projetos') {
+        logo.classList.add('dark');
+        logo.classList.remove('light');
     } else {
         logo.classList.add('light');
         logo.classList.remove('dark');
