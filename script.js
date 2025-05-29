@@ -104,3 +104,28 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach((section) => {
     observer.observe(section);
 });
+
+const track = document.querySelector('.carousel-track');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+let index = 0;
+
+nextBtn.addEventListener('click', () => {
+  if (index < track.children.length - 1) {
+    index++;
+    updateCarousel();
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+    updateCarousel();
+  }
+});
+
+function updateCarousel() {
+  const slideWidth = track.children[0].getBoundingClientRect().width;
+  track.style.transform = `translateX(-${index * slideWidth}px)`;
+}
